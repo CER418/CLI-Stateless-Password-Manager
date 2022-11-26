@@ -1,0 +1,6 @@
+.git
+.idea
+.venv
+build
+dist
+Stateless_CLI_password_manager.egg-info

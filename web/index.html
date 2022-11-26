@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<main>
+    <header>
+        <nav>
+            <h3>CLI Stateless Password Manager</h3>
+            <ul>
+                <li>📙 <a href="">Documentation</a></li>
+                <li>👫 <a href="">Contribute</a></li>
+                <li>☎️ <a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Hello world!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta ipsum magnam optio repellendus? Accusamus commodi, deserunt error explicabo fuga id in minus necessitatibus, praesentium quam ratione rem rerum vitae?</p>
+    </section>
+    <section id="documentation">
+        <h3>Documentation</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolorem illo perferendis similique sunt. Amet consequuntur delectus magni maiores nesciunt omnis possimus sapiente voluptatibus. Asperiores distinctio doloribus nobis rem. Aliquid consequatur dicta est excepturi expedita quam quasi recusandae reiciendis rerum soluta velit, voluptatum. Assumenda autem dolor dolore dolores, eius exercitationem explicabo laboriosam nobis, placeat quae quod repudiandae sapiente unde velit.</p>
+    </section>
+    <section id="contribute">
+        <h3>Contribute</h3>
+        <p>We are open to suggestions and want to improve the project! Whether you want to submit a PR or help translating the application, all help is appreciated.</p>
+    </section>
+    <section id="contact">
+        <h3>Contact</h3>
+        <p>Feel free to contact us with cheers or jeers!</p>
+        <ul>
+            <li><p>contact@cspm.com</p></li>
+        </ul>
+    </section>
+    <section>
+        <footer>
+            <p>Last updated <span id="lu"></span></p>
+        </footer>
+    </section>
+</main>
+</body>
+<script>
+    const date = new Date().toLocaleDateString()
+    document.getElementById('lu').innerHTML = date;
+</script>
+</html>

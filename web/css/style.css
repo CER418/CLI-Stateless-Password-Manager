@@ -1,0 +1,36 @@
+* {
+    font-family: monospace;
+}
+
+body {
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+main {
+    margin: 2em auto;
+    padding: 0 2em;
+    max-width: 700px;
+}
+
+header {
+    min-width: 300px;
+    display: flex;
+    line-height: 2;
+}
+
+nav ul, section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: currentColor;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
