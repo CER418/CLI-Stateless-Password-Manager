@@ -7,17 +7,16 @@ import getpass
 @click.command()
 @click.option('--site', '-s', required=False, help='E.g. google.com')
 @click.option('--username', '-u', required=False, help='E.g. sam')
-@click.option('--length', '-l', default=8, show_default=True)
+@click.option('--length', '-l', default=12, show_default=True)
 @click.option('--digest', '-d', default='SHA1', show_default=True,
               type=click.Choice(['SHA1', 'SHA224', 'SHA256', 'SHA384', 'SHA512'], case_sensitive=False))
-def run(length=8, site=str(), username=str(), digest='SHA1'):
-    """Stateless password manager that can generated passwords on the go 🍺
+def run(length: int = 8, site: str = '', username: str = '', digest: str = 'SHA1'):
+    """A stateless password manager that can generated passwords on the go 🍺
     Both site and username are optional, but has to be remembered in order to reproduce the hash digest if used."""
     password = getpass.getpass('Password: ')
     if password:
-        if length or site or username:
-            password_string = ''.join(filter(None, [site, username, password]))
-            return magic(length, digest, password_string)
+        password_string = ''.join(filter(None, [site, username]))
+        return magic(length, digest, password_string)
     click.secho("Something went wrong 🥴", fg='red', bold=True)
 
 
