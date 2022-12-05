@@ -1,15 +1,18 @@
 * {
-    font-family: monospace;
+    font-family: --apple-system, sans-serif;
 }
 
 body {
-    font-size: 1.125em;
+    font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
+    letter-spacing: 0.25px;
 
     display: flex;
     flex-direction: row;
     gap: 2em;
+    background: #FFFAFB;
+    color: #131515;
 }
 
 main {
@@ -33,4 +36,16 @@ a {
     color: currentColor;
     text-decoration: underline;
     text-decoration-thickness: 2px;
+}
+
+code {
+    font-family: monospace;
+    font-weight: 600;
+    color: #004BA8;
+    font-size: 1.125em;
+    padding: 0 1em;
+}
+.code {
+    display: flex;
+    flex-direction: column;
 }
