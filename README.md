@@ -1,3 +1,5 @@
+# CLI Stateless Password Manager
+
 ## Why passwords matter
 
 Once in a while data leaks occur. It can happen as companies or systems does not follow best practises, nor
