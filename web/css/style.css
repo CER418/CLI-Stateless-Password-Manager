@@ -45,7 +45,13 @@ code {
     font-size: 1.125em;
     padding: 0 1em;
 }
+
 .code {
     display: flex;
     flex-direction: column;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }

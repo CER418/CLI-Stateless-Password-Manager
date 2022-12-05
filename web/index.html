@@ -14,25 +14,25 @@
         <nav>
             <h1>Stateless password manager</h1>
             <ul>
-                <li>📙 <a href="">Documentation</a></li>
-                <li>👫 <a href="">Contribute</a></li>
-                <li>☎️ <a href="">Contact</a></li>
+                <li>📙 <a href="#documentation">Documentation</a></li>
+                <li>👫 <a href="#contribute">Contribute</a></li>
+                <li>☎️ <a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section>
         <h2>Why passwords matters</h2>
-        <p>Once in a while data leaks occurs, something that happens when systems or companies are not secure enough or
+        <p>Once in a while data leaks occur. It can happen as companies or systems does not follow best practises, nor
             manage to follow up on the latest vulnerabilities. Password has been used since the earliest days of
             computing. Although the development of security standards is constantly changing and improving, the
-            principles and use of passwords remain the same. To minimize the attack surface of the various services you
-            use, you should have unique passwords.</p>
+            principles and use of passwords remain mostly the same. To minimise the attack surface of the various
+            services one use, a good practise is using unique passwords.</p>
     </section>
     <section id="documentation">
         <h3>Documentation</h3>
-        <p>To get started, review the help page using:</p>
+        <p>To get started, view the help page:</p>
         <div class="code">
-            <code>cpm --help</code>
+            <code>python main.py --help</code>
             <p>Available options:</p>
             <code>-s, --site TEXT</code>
             <code>-u, --username TEXT</code>
@@ -40,11 +40,12 @@
             <code>-d, --digest [SHA1|SHA224|SHA256|SHA384|SHA512]</code>
         </div>
         <p>There are several options for creating passwords. One can specify the url or site name of the web page
-            the password is intended to be used on. It is also possible to specify a desired password length.</p>
+            the password is intended to be used on. It is also possible to specify a desired password length given that
+            the hash itself is long enough.</p>
         <h3>Examples</h3>
         <div class="code">
-            <code>cpm -s google -l 16</code>
-            <code>cpm -s github -u gh -l 8 -d SHA512</code>
+            <code>python main.py -s google -l 16</code>
+            <code>python main.py -s github -u gh -l 8 -d SHA512</code>
         </div>
     </section>
     <section id="contribute">
@@ -56,7 +57,7 @@
         <h3>Contact</h3>
         <p>Feel free to contact us with cheers or jeers!</p>
         <ul>
-            <li><p>contact@cspm.com</p></li>
+            <li><p class="underline" onclick="base64(this)">bWFydGluZmlkamVsYW5kQGdtYWlsLmNvbQo=</p></li>
         </ul>
     </section>
     <section>
@@ -69,5 +70,11 @@
 <script>
     const date = new Date().toLocaleDateString()
     document.getElementById('lu').innerHTML = date;
+
+    function base64(e) {
+        if (e.innerHTML.startsWith('bWF')) {
+            e.innerHTML = atob(e.innerHTML)
+        }
+    }
 </script>
 </html>
